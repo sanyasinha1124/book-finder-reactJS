@@ -23,6 +23,9 @@ export default function Navbar({ token, onLogout }) {
             <Link to="/upload" className="hover:underline">
               Upload & Share
             </Link>
+            <Link to="/">Home</Link>
+  <Link to="/books">Books</Link>
+  <Link to="/favorites">Favorites</Link> {/* ✅ New link */}
           </nav>
         </div>
 
