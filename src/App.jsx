@@ -45,7 +45,7 @@
 
 //           {/* Extended Features */}
 //           <Route path="/search" element={<Search />} />
-          
+
 //           <Route path="/categories" element={<Categories />} />
 //           <Route path="/reviews" element={<Reviews />} />
 //           <Route
@@ -83,8 +83,9 @@ import Summariser from "./pages/Summariser";
 import UploadBook from "./pages/UploadBook";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Library from "./pages/Library";
 import Search from "./pages/Search";
-import Favorites from "./pages/Favorites";   // ✅ Added Favorites page
+import Favorites from "./pages/Favorites"; // ✅ Added Favorites page
 
 import Categories from "./pages/Categories";
 import Reviews from "./pages/Reviews";
@@ -116,10 +117,10 @@ export default function App() {
           <Route path="/books" element={<Books />} />
           <Route path="/book/:id" element={<BookDetail />} />
           <Route path="/summariser" element={<Summariser />} />
-
           {/* Extended Features */}
           <Route path="/search" element={<Search />} />
-          <Route path="/favorites" element={<Favorites />} /> {/* ✅ Added route */}
+          <Route path="/favorites" element={<Favorites />} />{" "}
+          {/* ✅ Added route */}
           <Route path="/categories" element={<Categories />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route
@@ -127,16 +128,15 @@ export default function App() {
             element={token ? <Profile /> : <Navigate to="/login" />}
           />
           <Route path="/pdf-reader" element={<PDFReader />} />
-
           {/* Upload (protected) */}
           <Route
             path="/upload"
             element={token ? <UploadBook /> : <Navigate to="/login" />}
           />
-
           {/* Auth */}
           <Route path="/login" element={<Login setToken={setToken} />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/library" element={<Library />} />
         </Routes>
       </main>
 
